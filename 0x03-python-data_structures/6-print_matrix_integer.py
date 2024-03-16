@@ -3,5 +3,8 @@ def print_matrix_integer(matrix=[[]]):
     if matrix:
         for arr in matrix:
             for item in arr:
-                print("{:d}".format(item),end=" ")
+                if item == arr[-1]:
+                    print("{:d}".format(item),end="")
+                else:
+                    print("{:d}".format(item),end=" ")
             print('')
