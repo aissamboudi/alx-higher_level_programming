@@ -30,6 +30,9 @@ listint_t *reverse(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
+	if (!(*head))
+		return (1);
+
 	listint_t *aux, *current, *currentR, *h;
 
 	h = *head;
