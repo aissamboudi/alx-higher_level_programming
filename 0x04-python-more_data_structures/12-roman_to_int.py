@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-def roman_to_int(r):
-    a = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-    if not isinstance(r, str):
-        return 0
+def roman_to_int(roman_string):
+    r = roman_string
+
+    a = {"I": 1,"V": 5,"X": 10,"L": 50,"C": 100,"D": 500,"M": 1000}
+    if not isinstance(roman_string, str):
+        return(0)
     else:
         romans_v = []
         for i, x in enumerate(r):
@@ -10,4 +12,4 @@ def roman_to_int(r):
                 romans_v.append(a[x])
             else:
                 romans_v.append(-a[x])
-                return sum(romans_v)
+        return(sum(romans_v))
