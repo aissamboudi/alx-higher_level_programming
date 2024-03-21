@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary != None:
-        Mval = [key for key, value in a_dictionary.items() if value == max(a_dictionary.values())]
-        if len(Mval) > 0:
-            return Mval[0]
+    if a_dictionary:
+        maxval = max(a_dictionary.values(), default=None)
+        if maxval is not None:
+            return next(key for key, value in a_dictionary.items() if value == maxval)
     return None
